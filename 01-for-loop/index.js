@@ -43,3 +43,19 @@
 //         console.log(`Number ${i}`)
 //     }
 // }
+for (let i = 0; i <= 10; i++) {
+	console.log('Number' + i);
+}
+
+for (let i = 0; i <= 10; i++) {
+	if (i === 7) {
+		console.log('7 is my lucky number.');
+	}
+	console.log('Number' + i);
+}
+
+const fruits = ['apple', 'banana', 'grape'];
+
+for (let i = 0; i < fruits.length; i++) {
+	console.log(fruits[i]);
+}

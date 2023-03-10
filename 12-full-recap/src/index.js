@@ -42,3 +42,30 @@ for (let i = 0; i <= 20; i++) {
     }
     console.log(i);
 }
+// ============= 03 While do while ============= //
+let i = 0;
+while (i <= 20) {
+    console.log('Number ' + i);
+    i++;
+}
+// Loop over array
+const arr = [10, 20, 30, 40, 50];
+let j = 0;
+while (j < arr.length) {
+    console.log(arr[j]);
+    j++;
+}
+// Nedting while loops
+while (i <= 5) {
+    console.log('Number ' + i);
+    while (j <= 5) {
+        console.log(`${i} * ${j} = ${i * j}`);
+        j++;
+    }
+    i++;
+}
+// Do while loop
+do {
+    console.log('Number ' + i);
+    i++;
+} while (i <= 30);

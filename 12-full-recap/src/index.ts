@@ -99,6 +99,39 @@ for (let i = 1; i <= 100; i++) {
     }
 }
 
+// =============== 05 For of Loop ============= //
 
+// Loop through arrays
 
-export {};
+const items: string[] = ['book', 'table', 'chair', 'kite'];
+const users: {name: string}[] = [
+    { name: 'Brad' },
+    { name: 'Kate' },
+    { name: 'Sara' },
+]
+
+for (const item of items) {
+    console.log(item);
+}
+
+for (const person of users) {
+    console.log(person.name);
+}
+
+// Loop over strings
+
+const str = 'Hello World';
+
+for (const char of str) {
+    console.log(char);
+}
+
+// Loop over Maps
+
+const map = new Map();
+map.set('name', 'John');
+map.set('age', 30);
+
+for (const value of map) {
+    console.log(value);
+}

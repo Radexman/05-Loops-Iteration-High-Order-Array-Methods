@@ -161,3 +161,31 @@ const colorArr: string[] = ['red', 'green', 'blue', 'yellow'];
 for (const color in colorArr) {
     console.log(color, colorArr[color]);
 }
+
+// ================ 07 forEach() ============== //
+
+const socials: string[] = ['Twitter', 'LinkedIn', 'Facebook', 'Instagram'];
+// console.log(socials.__proto__);
+
+// Old school function keyword
+
+// socials.forEach(function(social) {
+//     console.log(social);
+// });
+
+// ES6+ Arrow function with implicit return
+
+// socials.forEach((item, index, array) => console.log(item, index, array));
+
+const logSocials = (social: string) => console.log(social);
+
+// socials.forEach(logSocials);
+
+const socialObjs: {name: string, url: string}[] = [
+    { name: 'Twitter', url: 'https://twitter.com' },
+    { name: 'Facebook', url: 'https://facebook.com' },
+    { name: 'LinkedIn', url: 'https://linkedin.com' },
+    { name: 'Instagram', url: 'https://instagram.com' },
+]
+
+socialObjs.forEach((item) => console.log(`${item.name} ${item.url}`));

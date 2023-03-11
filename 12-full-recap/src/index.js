@@ -1,5 +1,6 @@
 "use strict";
 // =============== 01 For Loop =============== //
+Object.defineProperty(exports, "__esModule", { value: true });
 for (let i = 1; i <= 10; i++) {
     if (i === 7) {
         console.log('7 is my lucky number.');
@@ -69,3 +70,18 @@ do {
     console.log('Number ' + i);
     i++;
 } while (i <= 30);
+// ============ 04 FizzBuzz Challange ========== //
+for (let i = 1; i <= 100; i++) {
+    if (i % 15 === 0) {
+        console.log('FizzBuzz');
+    }
+    else if (i % 3 === 0) {
+        console.log('Fizz');
+    }
+    else if (i % 5 === 0) {
+        console.log('Buzz');
+    }
+    else {
+        console.log(i);
+    }
+}

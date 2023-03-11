@@ -172,3 +172,43 @@ console.log(earlyCompanies);
 // Get companies thta lasted 10 years or more
 const longCompanies = companies.filter(company => company.end - company.start >= 10);
 console.log(longCompanies);
+// =================== 09 map() ================= //
+const numberss = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const doubles = numberss.map(number => number * 2);
+console.log(doubles);
+// Same with forEach()
+const doublesTwo = [];
+numberss.forEach((number) => doublesTwo.push(number * 2));
+console.log(doublesTwo);
+// Create an array of company names
+const companyNames = companies.map(company => company.name);
+console.log(companyNames);
+// Create an array with just company and category
+const companyNameCategory = companies.map(company => `${company.name}: ${company.category}`);
+console.log(companyNameCategory);
+// Create an object with comapny and category
+const companyObj = companies.map(company => {
+    return {
+        name: company.name,
+        category: company.category,
+    };
+});
+console.log(companyObj);
+// Create an array of objects with the name and the length of each company in years
+const companyAge = companies.map(company => {
+    return {
+        name: company.name,
+        age: `${company.end - company.start} years`,
+    };
+});
+console.log(companyAge);
+// Chain map methods
+const squareAndDouble = numbers
+    .map(number => Math.sqrt(number))
+    .map(sqrt => sqrt * 2)
+    .map(sqrtDoubled => sqrtDoubled * 3);
+// Chaining different methods
+const evenDouble = numbers
+    .filter(number => number % 2 === 0)
+    .map(even => even * 2);
+console.log(evenDouble);

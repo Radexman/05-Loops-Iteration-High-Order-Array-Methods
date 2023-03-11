@@ -135,3 +135,29 @@ map.set('age', 30);
 for (const value of map) {
     console.log(value);
 }
+
+// =============== 06 For in Loop ============= //
+
+interface Color {
+    color1: string,
+    color2: string,
+    color3: string,
+    color4: string,
+}
+
+const colorObj: Color = {
+    color1: 'red',
+    color2: 'green',
+    color3: 'blue',
+    color4: 'black',
+}
+
+for (const key in colorObj) {
+    console.log(key);
+}
+
+const colorArr: string[] = ['red', 'green', 'blue', 'yellow'];
+
+for (const color in colorArr) {
+    console.log(color, colorArr[color]);
+}

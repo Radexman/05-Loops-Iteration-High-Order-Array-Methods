@@ -284,3 +284,33 @@ const evenDouble = numbers
     .filter(number => number % 2 === 0)
     .map(even => even * 2);
 console.log(evenDouble);
+
+// ================= 10 reduce() =============== //
+
+const numbersTwo: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const sum = numbersTwo.reduce(function (accumulator, current): number {
+    return accumulator += current;
+}, 0)
+const sumTwo = numbersTwo.reduce((acc, curr) => acc += curr, 0);
+console.log(sumTwo);
+
+// Using a for loop
+const sumThree = () => {
+    let acc = 0;
+    for (const cur of numbers) {
+        acc += cur;
+    }
+    return acc;
+}
+
+const cart: {id: number, name: string, price: number}[] = [
+    { id: 1, name: 'Product 1', price: 150 },
+    { id: 2, name: 'Product 2', price: 120 },
+    { id: 3, name: 'Product 3', price: 100 },
+    { id: 4, name: 'Product 4', price: 200 },
+    { id: 5, name: 'Product 5', price: 175 },
+    { id: 6, name: 'Product 6', price: 130 },
+]
+
+const totalCost = cart.reduce((acc, product) => acc + product.price , 0);
+console.log(totalCost);
